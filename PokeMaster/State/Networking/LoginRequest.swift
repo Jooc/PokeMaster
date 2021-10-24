@@ -17,7 +17,7 @@ struct LoginRequest {
         Future { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
                 if self.password == "password" {
-                    let user = User(email: self.email, favoritePokemonIDs: [])
+                    let user = User(email: self.email, pokemonsIDs: [1], favoritePokemonIDs: [])
                     promise(.success(user))
                 } else {
                     promise(.failure(.passwordWrong))

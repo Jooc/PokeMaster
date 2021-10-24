@@ -112,9 +112,11 @@ class Store: ObservableObject {
             if appState.pokemonList.loadingPokemons {
                 break
             }
-            appState.pokemonList.pokemonsLoadingError = nil
-            appState.pokemonList.loadingPokemons = true
-            appCommand = LoadPokemonsCommand()
+            if let user = appState.settings.loginUser{
+                appState.pokemonList.pokemonsLoadingError = nil
+                appState.pokemonList.loadingPokemons = true
+                appCommand = LoadPokemonsCommand(pokemonIDs: Array(user.pokemonsIDs))
+            }
 
         case .loadPokemonsDone(let result):
             appState.pokemonList.loadingPokemons = false

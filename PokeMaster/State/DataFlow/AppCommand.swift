@@ -57,6 +57,7 @@ struct LoginAppCommand: AppCommand {
             },
             receiveValue: { user in
                 store.dispatch(.accountBehaviorDone(result: .success(user)))
+                store.dispatch(.loadPokemons)
             }
         )
         .seal(in: token)
@@ -64,9 +65,11 @@ struct LoginAppCommand: AppCommand {
 }
 
 struct LoadPokemonsCommand: AppCommand {
+    var pokemonIDs: [Int] = []
+    
     func execute(in store: Store) {
         let token = SubscriptionToken()
-        LoadPokemonRequest.all
+        LoadPokemonRequest.myPokemons(pokemonIDs)
             .sink(
                 receiveCompletion: { complete in
                     if case .failure(let error) = complete {

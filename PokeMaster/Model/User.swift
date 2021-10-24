@@ -10,6 +10,7 @@ import Foundation
 
 struct User: Codable {
     var email: String
+    var pokemonsIDs: Set<Int> = []
     var favoritePokemonIDs: Set<Int>
 
     func isFavoritePokemon(id: Int) -> Bool {

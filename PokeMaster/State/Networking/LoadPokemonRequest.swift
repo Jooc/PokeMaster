@@ -17,6 +17,12 @@ struct LoadPokemonRequest {
             .map { LoadPokemonRequest(id: $0).publisher }
             .zipAll
     }
+    
+    static func myPokemons(_ target:[Int] ) -> AnyPublisher<[PokemonViewModel], AppError>{
+        return target
+            .map{ LoadPokemonRequest(id: $0).publisher }
+            .zipAll
+    }
 
     var publisher: AnyPublisher<PokemonViewModel, AppError> {
         pokemonPublisher(id)

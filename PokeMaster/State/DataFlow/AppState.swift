@@ -114,10 +114,10 @@ extension AppState {
             }
         }
 
-        @FileStorage(directory: .cachesDirectory, fileName: "pokemons.json")
+//        @FileStorage(directory: .cachesDirectory, fileName: "pokemons.json")
         var pokemons: [Int: PokemonViewModel]?
 
-        @FileStorage(directory: .cachesDirectory, fileName: "abilities.json")
+//        @FileStorage(directory: .cachesDirectory, fileName: "abilities.json")
         var abilities: [Int: AbilityViewModel]?
 
         func abilityViewModels(for pokemon: Pokemon) -> [AbilityViewModel]? {
@@ -197,7 +197,7 @@ extension AppState {
 extension AppState {
     struct MainTab {
         enum Index: Hashable {
-            case list, settings
+            case list, map, settings
         }
 
         var selection: Index = .list

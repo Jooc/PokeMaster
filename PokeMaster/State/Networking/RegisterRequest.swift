@@ -18,7 +18,7 @@ struct RegisterRequest {
             DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
                 let r = Double.random(in: 0..<1)
                 if r <= 0.5 {
-                    let user = User(email: self.email, favoritePokemonIDs: [])
+                    let user = User(email: self.email, pokemonsIDs: [], favoritePokemonIDs: [])
                     promise(.success(user))
                 } else {
                     promise(.failure(.alreadyRegistered))
