@@ -38,7 +38,7 @@ struct MapView: View {
                         }
                     }
                 }
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
                 .onAppear {
                     store.appState.map.checkIfLocationServiceIsEnabled()
                 }
