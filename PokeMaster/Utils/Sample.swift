@@ -62,6 +62,12 @@ extension AbilityViewModel {
     }
 }
 
+extension User{
+    static var sample: User{
+        return User(email: "123@qq.com", pokemonsIDs: [1,2,3,], favoritePokemonIDs: [])
+    }
+}
+
 extension Store {
     static var sample: Store {
         let s = Store()
@@ -69,6 +75,7 @@ extension Store {
             Dictionary(uniqueKeysWithValues: PokemonViewModel.all.map { ($0.id, $0) })
         s.appState.pokemonList.abilities =
             Dictionary(uniqueKeysWithValues: AbilityViewModel.sample(pokemonID: 1).map { ($0.id, $0) } )
+        s.appState.settings.loginUser = User.sample
         return s
     }
 }

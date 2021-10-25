@@ -34,6 +34,11 @@ struct MainTab: View {
                 Image(systemName: "globe.asia.australia.fill")
                 Text("地图")
             }.tag(AppState.MainTab.Index.map)
+            
+            SwitchView().tabItem{
+                Image(systemName: "shareplay")
+                Text("交换")
+            }.tag(AppState.MainTab.Index.switchPoke)
 
             SettingRootView().tabItem {
                 Image(systemName: "gear")

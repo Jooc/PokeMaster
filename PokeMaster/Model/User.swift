@@ -16,4 +16,15 @@ struct User: Codable {
     func isFavoritePokemon(id: Int) -> Bool {
         favoritePokemonIDs.contains(id)
     }
+    
+    struct IDViewModel: Identifiable{
+        var uuid = UUID()
+        var id: Int
+    }
+    
+    func generatePokemonIDs() -> [IDViewModel]{
+        return self.pokemonsIDs.map{
+            IDViewModel(id: $0)
+        }
+    }
 }

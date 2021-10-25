@@ -5,16 +5,20 @@
 //  Created by Wang Wei on 2019/08/21.
 //  Copyright © 2019 OneV's Den. All rights reserved.
 //
+import os.log
 
 import Foundation
 import Combine
-import CoreLocation
+
 import MapKit
+import CoreLocation
+import CoreBluetooth
 
 struct AppState {
     var pokemonList = PokemonList()
     var map = Map()
     var settings = Settings()
+    var switchPokemon = SwitchPokemon()
     var mainTab = MainTab()
 }
 
@@ -197,7 +201,7 @@ extension AppState {
     }
 }
 
-extension AppState{
+extension AppState {
     class Map: NSObject, CLLocationManagerDelegate{
         
         struct AnnotatedItem: Identifiable{
@@ -251,12 +255,32 @@ extension AppState{
     }
 }
 
+extension AppState{
+    struct SwitchPokemon{
+        class Receiver{
+            @Published var isSwitchedOn = false
+            @Published var switchablePoke: [Int] = []
+            
+            var centralManager = BLECentralManager()
+        }
+        
+        class Sender{
+            @Published var switchablePoke: [Int] = []
+            @Published var chosenPokeID = -1
+
+            var peripheralManager = BLEPeripheralManager()
+        }
+        
+        var receiver = Receiver()
+        var sender = Sender()
+    }
+}
+
 extension AppState {
     struct MainTab {
         enum Index: Hashable {
-            case list, map, settings
+            case list, map, switchPoke, settings
         }
-
         var selection: Index = .list
     }
 }

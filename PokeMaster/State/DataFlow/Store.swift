@@ -8,6 +8,8 @@
 
 import Combine
 
+//TODO: Update switchable pokemon list after get new one
+
 class Store: ObservableObject {
     @Published var appState = AppState()
 

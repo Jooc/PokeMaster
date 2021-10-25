@@ -111,6 +111,14 @@
 		F1F2170C2725AB3300DB8E1C /* ability-34.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216CE2725AB3300DB8E1C /* ability-34.json */; };
 		F1F2170D2725AB3300DB8E1C /* ability-65.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216CF2725AB3300DB8E1C /* ability-65.json */; };
 		F1F217102725BCFD00DB8E1C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2170F2725BCFD00DB8E1C /* MapView.swift */; };
+		F1F21713272664C600DB8E1C /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21712272664C600DB8E1C /* SwitchView.swift */; };
+		F1F21716272685F500DB8E1C /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21715272685F500DB8E1C /* BluetoothHelper.swift */; };
+		F1F2171A2726AE9000DB8E1C /* BluetoothCentralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */; };
+		F1F2171C2726AE9E00DB8E1C /* BluetoothPeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */; };
+		F1F2171E2726D17D00DB8E1C /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */; };
+		F1F217202726FC6500DB8E1C /* BLEPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */; };
+		F1F217222727024200DB8E1C /* SenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217212727024200DB8E1C /* SenderView.swift */; };
+		F1F217242727024A00DB8E1C /* ReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217232727024A00DB8E1C /* ReceiverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +227,14 @@
 		F1F216CE2725AB3300DB8E1C /* ability-34.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-34.json"; sourceTree = "<group>"; };
 		F1F216CF2725AB3300DB8E1C /* ability-65.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-65.json"; sourceTree = "<group>"; };
 		F1F2170F2725BCFD00DB8E1C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F1F21712272664C600DB8E1C /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		F1F21715272685F500DB8E1C /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
+		F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralView.swift; sourceTree = "<group>"; };
+		F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralView.swift; sourceTree = "<group>"; };
+		F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
+		F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralManager.swift; sourceTree = "<group>"; };
+		F1F217212727024200DB8E1C /* SenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderView.swift; sourceTree = "<group>"; };
+		F1F217232727024A00DB8E1C /* ReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +299,8 @@
 				D1447BF222FD42C500FCEA21 /* BlurView.swift */,
 				D14CFCE9231218DF003B68FB /* SafariView.swift */,
 				D10ED98822FF1ED100E632CB /* OverlaySheet.swift */,
+				F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */,
+				F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -362,9 +380,12 @@
 		D130B8E622F87FE9006EDCDC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */,
+				F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */,
 				4B80155D230BC57300BD44E6 /* Helpers.swift */,
 				D15B5A58230ECE5800AD6C65 /* FileHelper.swift */,
 				4B9EB02C231640B300B72082 /* Sample.swift */,
+				F1F21715272685F500DB8E1C /* BluetoothHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -418,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				D1EA9E0B22FF138E00CD45DE /* MainTab.swift */,
+				F1F21714272664CF00DB8E1C /* Switch */,
 				F1F2170E2725BCEE00DB8E1C /* Map */,
 				D187753A230024FA00422D2D /* Pokemon */,
 				D1877539230024E300422D2D /* Setting */,
@@ -534,6 +556,16 @@
 				F1F2170F2725BCFD00DB8E1C /* MapView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		F1F21714272664CF00DB8E1C /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				F1F21712272664C600DB8E1C /* SwitchView.swift */,
+				F1F217212727024200DB8E1C /* SenderView.swift */,
+				F1F217232727024A00DB8E1C /* ReceiverView.swift */,
+			);
+			path = Switch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,8 +710,11 @@
 				4B4358C3230D331F00D1E728 /* LoginRequest.swift in Sources */,
 				D14CFCEA231218DF003B68FB /* SafariView.swift in Sources */,
 				D130B8A722F875AC006EDCDC /* Pokemon.swift in Sources */,
+				F1F217242727024A00DB8E1C /* ReceiverView.swift in Sources */,
 				4B1FEF55230CDAED00B7D017 /* AppAction.swift in Sources */,
+				F1F217222727024200DB8E1C /* SenderView.swift in Sources */,
 				D15B5A5C230EDEBA00AD6C65 /* FileStorage.swift in Sources */,
+				F1F21713272664C600DB8E1C /* SwitchView.swift in Sources */,
 				D1447BF322FD42C500FCEA21 /* BlurView.swift in Sources */,
 				D130B8A422F874CE006EDCDC /* PokemonInfoRow.swift in Sources */,
 				4B801560230BC5F900BD44E6 /* Language.swift in Sources */,
@@ -687,6 +722,7 @@
 				4B9EB02D231640B300B72082 /* Sample.swift in Sources */,
 				D1EA9E0C22FF138E00CD45DE /* MainTab.swift in Sources */,
 				D1EA9E0722FE5D1900CD45DE /* PokemonInfoPanelHeader.swift in Sources */,
+				F1F2171C2726AE9E00DB8E1C /* BluetoothPeripheralView.swift in Sources */,
 				D1B36FC2230D7559008B4C6B /* EmailCheckingRequest.swift in Sources */,
 				4BFE512D22F8018800500B72 /* AppDelegate.swift in Sources */,
 				D10ED98922FF1ED100E632CB /* OverlaySheet.swift in Sources */,
@@ -696,8 +732,11 @@
 				D1D13AF222F9ACAF00F25612 /* PokemonViewModel.swift in Sources */,
 				D1D13B3122F9BDC300F25612 /* PokemonInfoPanel.swift in Sources */,
 				4B4358BE230D28C400D1E728 /* AppCommand.swift in Sources */,
+				F1F217202726FC6500DB8E1C /* BLEPeripheralManager.swift in Sources */,
+				F1F21716272685F500DB8E1C /* BluetoothHelper.swift in Sources */,
 				4BC63B07230E872D00A3D87D /* LoadPokemonRequest.swift in Sources */,
 				D1D7EEAB231BFDB100A52D3D /* SettingView.swift in Sources */,
+				F1F2171A2726AE9000DB8E1C /* BluetoothCentralView.swift in Sources */,
 				D11D5CFD2313DCE7001DCEEF /* LoadingView.swift in Sources */,
 				4BE854C723209E4D00FE4205 /* User.swift in Sources */,
 				D15B5A5E2311747400AD6C65 /* LoadAbilitiesRequest.swift in Sources */,
@@ -707,6 +746,7 @@
 				4BFE512F22F8018800500B72 /* SceneDelegate.swift in Sources */,
 				4B9EB02F2316411E00B72082 /* AppError.swift in Sources */,
 				4B1FEF53230CD6D500B7D017 /* AppState.swift in Sources */,
+				F1F2171E2726D17D00DB8E1C /* BLECentralManager.swift in Sources */,
 				4B1FEF51230CD69F00B7D017 /* Store.swift in Sources */,
 				D13884C122FD3225005F7901 /* Ability.swift in Sources */,
 				D187753C230030E700422D2D /* SettingRootView.swift in Sources */,
