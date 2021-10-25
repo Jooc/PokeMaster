@@ -148,6 +148,10 @@ class Store: ObservableObject {
             appState.pokemonList.pokemons = nil
             appState.pokemonList.abilities = nil
             appCommand = ClearCacheCommand()
+            
+        case .addPokemon(pokemonID: let pokemonID):
+            appState.settings.loginUser?.pokemonsIDs.insert(pokemonID)
+            appCommand = AddPokemonCommand()
         }
         return (appState, appCommand)
     }

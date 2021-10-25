@@ -29,6 +29,11 @@ struct MainTab: View {
                 Image(systemName: "list.bullet.below.rectangle")
                 Text("列表")
             }.tag(AppState.MainTab.Index.list)
+            
+            MapView().tabItem {
+                Image(systemName: "globe.asia.australia.fill")
+                Text("地图")
+            }.tag(AppState.MainTab.Index.map)
 
             SettingRootView().tabItem {
                 Image(systemName: "gear")

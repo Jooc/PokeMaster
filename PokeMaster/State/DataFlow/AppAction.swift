@@ -32,6 +32,8 @@ enum AppAction {
 
     case loadAbilities(pokemon: Pokemon)
     case loadAbilitiesDone(result: Result<[AbilityViewModel], AppError>)
+    
+    case addPokemon(pokemonID: Int)
 
     // General
     case switchTab(index: AppState.MainTab.Index)

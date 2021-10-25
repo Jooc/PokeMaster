@@ -8,9 +8,12 @@
 
 import Foundation
 import Combine
+import CoreLocation
+import MapKit
 
 struct AppState {
     var pokemonList = PokemonList()
+    var map = Map()
     var settings = Settings()
     var mainTab = MainTab()
 }
@@ -190,6 +193,60 @@ extension AppState {
             return pokemons.values
                 .filter(filterFunc)
                 .sorted(by: sortFunc)
+        }
+    }
+}
+
+extension AppState{
+    class Map: NSObject, CLLocationManagerDelegate{
+        
+        struct AnnotatedItem: Identifiable{
+            let id = UUID()
+            var pokemonID: Int
+            var coordinate: CLLocationCoordinate2D
+        }
+        
+        var locationManager: CLLocationManager?
+        var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 24.611883, longitude: 118.315689), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        var wildPokemon = [
+            AnnotatedItem(pokemonID: 1, coordinate: .init(latitude: 24.62, longitude: 118.32)),
+            AnnotatedItem(pokemonID: 5, coordinate: .init(latitude: 24.59, longitude: 118.29)),
+            AnnotatedItem(pokemonID: 9, coordinate: .init(latitude: 24.61, longitude: 118.33)),
+            AnnotatedItem(pokemonID: 10, coordinate: .init(latitude: 24.65, longitude: 118.35)),
+            AnnotatedItem(pokemonID: 30, coordinate: .init(latitude: 25.65, longitude: 119.35)),
+        ]
+                
+        func checkIfLocationServiceIsEnabled(){
+            if CLLocationManager.locationServicesEnabled(){
+                locationManager = CLLocationManager()
+                locationManager!.delegate = self
+                //                locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            }else{
+                print("Alert location unable")
+            }
+        }
+        
+        private func checkLocationAuthorization(){
+            guard let locationManager = locationManager else {
+                return
+            }
+            
+            switch locationManager.authorizationStatus{
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .restricted:
+                print("alert @.restricted")
+            case .denied:
+                print("alert @.denied")
+            case .authorizedAlways, .authorizedWhenInUse:
+                break
+            @unknown default:
+                break
+            }
+        }
+        
+        func locationManagerDidChangeAuthorization(_ manager: CLLocationManager){
+            checkLocationAuthorization()
         }
     }
 }
