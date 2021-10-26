@@ -23,7 +23,7 @@ struct User: Codable {
     }
     
     func generatePokemonIDs() -> [IDViewModel]{
-        return self.pokemonsIDs.map{
+        return self.pokemonsIDs.sorted().map{
             IDViewModel(id: $0)
         }
     }

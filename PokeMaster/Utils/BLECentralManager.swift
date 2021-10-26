@@ -23,11 +23,12 @@ struct Peripheral: Identifiable{
 }
 
 class BLECentralManager: NSObject, ObservableObject{
-    @Published var switchablePoke: [Int] = []
+    @Published var scannerCounter:Int = 0
+    @Published var availableDevice: [CBPeripheral] = []
     
     var centralManager: CBCentralManager!
     
-    var discoveredPeripheral: CBPeripheral?
+    @Published var discoveredPeripheral: CBPeripheral?
     var transferCharacteristic: CBCharacteristic?
     var writeIterationsComplete = 0
     var connectionIterationsComplete = 0
@@ -172,6 +173,7 @@ extension BLECentralManager: CBCentralManagerDelegate{
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        self.scannerCounter += 1
         guard RSSI.intValue >= -50 else{
             os_log("Discovered perhiperal not in expected range, at %d", RSSI.intValue)
             return
@@ -184,6 +186,9 @@ extension BLECentralManager: CBCentralManagerDelegate{
             
             // Save a local copy of the peripheral, so CoreBluetooth doesn't get rid of it.
             discoveredPeripheral = peripheral
+            if !availableDevice.contains(discoveredPeripheral!) && discoveredPeripheral!.name != nil{
+                availableDevice.append(discoveredPeripheral!)
+            }
             
             // And finally, connect to the peripheral.
             os_log("Connecting to perhiperal %@", peripheral)
@@ -293,9 +298,10 @@ extension BLECentralManager: CBPeripheralDelegate{
         
         os_log("Received %d bytes: %s", characteristicData.count, stringFromData)
         
+//        switchablePoke.append(Int(stringFromData) ?? -1)
+        print("Pokemon Received \(Int(stringFromData) ?? -1)")
+        
         if stringFromData == "EOM"{
-            switchablePoke.append(Int(String(data: self.data, encoding: .utf8) ?? "") ?? -1)
-            
             writeData()
         }else{
             data.append(characteristicData)

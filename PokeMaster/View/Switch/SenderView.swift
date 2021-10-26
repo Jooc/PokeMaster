@@ -7,10 +7,34 @@
 //
 
 import SwiftUI
+import CoreBluetooth
 
 struct SenderView: View {
+    @EnvironmentObject var store: Store
+    
+    var manager: BLEPeripheralManager {
+        store.appState.switchPokemon.sender.peripheralManager
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 20) {
+            Text("Available Friends")
+        
+            Button(action: {
+                manager.startScanning()
+            }){
+                Text("Start Scanning")
+            }.modifier(ButtonMoifier())
+            
+            Button(action: {
+                print(manager.connectedCentral)
+                print("is sending pokemon...")
+                manager.sendPokemon(targetID: store.appState.switchPokemon.chosenPokeID)
+            }){
+                Text("Send")
+            }.modifier(ButtonMoifier())
+                .disabled(manager.connectedCentral == nil)
+        }
     }
 }
 

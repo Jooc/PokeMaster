@@ -113,12 +113,11 @@
 		F1F217102725BCFD00DB8E1C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2170F2725BCFD00DB8E1C /* MapView.swift */; };
 		F1F21713272664C600DB8E1C /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21712272664C600DB8E1C /* SwitchView.swift */; };
 		F1F21716272685F500DB8E1C /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21715272685F500DB8E1C /* BluetoothHelper.swift */; };
-		F1F2171A2726AE9000DB8E1C /* BluetoothCentralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */; };
-		F1F2171C2726AE9E00DB8E1C /* BluetoothPeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */; };
 		F1F2171E2726D17D00DB8E1C /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */; };
 		F1F217202726FC6500DB8E1C /* BLEPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */; };
 		F1F217222727024200DB8E1C /* SenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217212727024200DB8E1C /* SenderView.swift */; };
 		F1F217242727024A00DB8E1C /* ReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217232727024A00DB8E1C /* ReceiverView.swift */; };
+		F1F217292727EB6200DB8E1C /* SimplifiedPokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F217282727EB6200DB8E1C /* SimplifiedPokemonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,12 +228,11 @@
 		F1F2170F2725BCFD00DB8E1C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F1F21712272664C600DB8E1C /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
 		F1F21715272685F500DB8E1C /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
-		F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralView.swift; sourceTree = "<group>"; };
-		F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralView.swift; sourceTree = "<group>"; };
 		F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
 		F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralManager.swift; sourceTree = "<group>"; };
 		F1F217212727024200DB8E1C /* SenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderView.swift; sourceTree = "<group>"; };
 		F1F217232727024A00DB8E1C /* ReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverView.swift; sourceTree = "<group>"; };
+		F1F217282727EB6200DB8E1C /* SimplifiedPokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedPokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				D1D13AF122F9ACAF00F25612 /* PokemonViewModel.swift */,
+				F1F217282727EB6200DB8E1C /* SimplifiedPokemonViewModel.swift */,
 				D13884C222FD33A4005F7901 /* AbilityViewModel.swift */,
 			);
 			path = ViewModel;
@@ -299,8 +298,6 @@
 				D1447BF222FD42C500FCEA21 /* BlurView.swift */,
 				D14CFCE9231218DF003B68FB /* SafariView.swift */,
 				D10ED98822FF1ED100E632CB /* OverlaySheet.swift */,
-				F1F217192726AE9000DB8E1C /* BluetoothCentralView.swift */,
-				F1F2171B2726AE9E00DB8E1C /* BluetoothPeripheralView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -722,7 +719,6 @@
 				4B9EB02D231640B300B72082 /* Sample.swift in Sources */,
 				D1EA9E0C22FF138E00CD45DE /* MainTab.swift in Sources */,
 				D1EA9E0722FE5D1900CD45DE /* PokemonInfoPanelHeader.swift in Sources */,
-				F1F2171C2726AE9E00DB8E1C /* BluetoothPeripheralView.swift in Sources */,
 				D1B36FC2230D7559008B4C6B /* EmailCheckingRequest.swift in Sources */,
 				4BFE512D22F8018800500B72 /* AppDelegate.swift in Sources */,
 				D10ED98922FF1ED100E632CB /* OverlaySheet.swift in Sources */,
@@ -736,7 +732,6 @@
 				F1F21716272685F500DB8E1C /* BluetoothHelper.swift in Sources */,
 				4BC63B07230E872D00A3D87D /* LoadPokemonRequest.swift in Sources */,
 				D1D7EEAB231BFDB100A52D3D /* SettingView.swift in Sources */,
-				F1F2171A2726AE9000DB8E1C /* BluetoothCentralView.swift in Sources */,
 				D11D5CFD2313DCE7001DCEEF /* LoadingView.swift in Sources */,
 				4BE854C723209E4D00FE4205 /* User.swift in Sources */,
 				D15B5A5E2311747400AD6C65 /* LoadAbilitiesRequest.swift in Sources */,
@@ -745,6 +740,7 @@
 				D187753822FFC2AE00422D2D /* RadarView.swift in Sources */,
 				4BFE512F22F8018800500B72 /* SceneDelegate.swift in Sources */,
 				4B9EB02F2316411E00B72082 /* AppError.swift in Sources */,
+				F1F217292727EB6200DB8E1C /* SimplifiedPokemonViewModel.swift in Sources */,
 				4B1FEF53230CD6D500B7D017 /* AppState.swift in Sources */,
 				F1F2171E2726D17D00DB8E1C /* BLECentralManager.swift in Sources */,
 				4B1FEF51230CD69F00B7D017 /* Store.swift in Sources */,

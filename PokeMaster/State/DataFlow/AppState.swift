@@ -257,20 +257,22 @@ extension AppState {
 
 extension AppState{
     struct SwitchPokemon{
-        class Receiver{
-            @Published var isSwitchedOn = false
-            @Published var switchablePoke: [Int] = []
+        struct Receiver{
+            var isSwitchedOn = false
+            var pokemonIDs: [Int] = []
             
             var centralManager = BLECentralManager()
         }
         
-        class Sender{
-            @Published var switchablePoke: [Int] = []
-            @Published var chosenPokeID = -1
-
+        struct Sender{
+            var pokemonIDs: [Int] = []
+            
             var peripheralManager = BLEPeripheralManager()
         }
         
+        var chosenPokeID = 1
+        
+        var counter:Int = 0
         var receiver = Receiver()
         var sender = Sender()
     }
@@ -281,6 +283,6 @@ extension AppState {
         enum Index: Hashable {
             case list, map, switchPoke, settings
         }
-        var selection: Index = .list
+        var selection: Index = .switchPoke
     }
 }

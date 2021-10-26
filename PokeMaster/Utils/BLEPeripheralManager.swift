@@ -12,16 +12,20 @@ import CoreBluetooth
 import os.log
 
 class BLEPeripheralManager: NSObject, ObservableObject{
-    @Published var chosenPokeID: Int = -1
+    @Published var chosenPokeID: Int = 1
     
     var peripheralManager: CBPeripheralManager!
 
     var transferCharacteristic: CBMutableCharacteristic?
-    var connectedCentral: CBCentral?
+    @Published var connectedCentral: CBCentral?
     var dataToSend = Data()
     var sendDataIndex: Int = 0
     
     static var sendingEOM = false
+    
+    func startScanning(){
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [CBCentralManagerRestoredStateScanOptionsKey: true])
+    }
     
     func sendPokemon(targetID: Int){
         chosenPokeID = targetID
@@ -93,6 +97,7 @@ class BLEPeripheralManager: NSObject, ObservableObject{
     
     private func setupPeripheral() {
         // Build our service.
+        print("Setting up Peripheral")
         
         // Start with the CBMutableCharacteristic.
         let transferCharacteristic = CBMutableCharacteristic(type: TransferService.characteristicUUID,
@@ -129,6 +134,7 @@ extension BLEPeripheralManager: CBPeripheralManagerDelegate{
             // ... so start working with the peripheral
             os_log("CBManager is powered on")
             setupPeripheral()
+            sendData()
         case .poweredOff:
             os_log("CBManager is not powered on")
             // In a real app, you'd deal with all the states accordingly
