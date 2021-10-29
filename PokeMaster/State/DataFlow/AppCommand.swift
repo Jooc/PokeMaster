@@ -133,6 +133,12 @@ struct AddPokemonCommand: AppCommand{
     }
 }
 
+struct ReleasePokemonCommand: AppCommand{
+    func execute(in store: Store) {
+        store.dispatch(.loadPokemons)
+    }
+}
+
 class SubscriptionToken {
     var cancellable: AnyCancellable?
     func unseal() { cancellable = nil }

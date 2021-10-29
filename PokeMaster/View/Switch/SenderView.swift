@@ -13,8 +13,10 @@ struct SenderView: View {
     @EnvironmentObject var store: Store
     
     var manager: BLEPeripheralManager {
-        store.appState.switchPokemon.sender.peripheralManager
+        store.appState.switchPokemon.peripheralManager
     }
+    
+    let chosenPokeID: Int
     
     var body: some View {
         VStack(spacing: 20) {
@@ -29,7 +31,7 @@ struct SenderView: View {
             Button(action: {
                 print(manager.connectedCentral)
                 print("is sending pokemon...")
-                manager.sendPokemon(targetID: store.appState.switchPokemon.chosenPokeID)
+//                manager.sendPokemon(targetID: store.appState.switchPokemon.chosenPokeID)
             }){
                 Text("Send")
             }.modifier(ButtonMoifier())
@@ -40,6 +42,6 @@ struct SenderView: View {
 
 struct SenderView_Previews: PreviewProvider {
     static var previews: some View {
-        SenderView()
+        SenderView(chosenPokeID: 1)
     }
 }

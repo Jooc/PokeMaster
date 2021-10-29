@@ -16,25 +16,25 @@ struct ReceiverView: View {
 //    @State var c = 0
     
     var manager: BLECentralManager{
-        store.appState.switchPokemon.receiver.centralManager
+        store.appState.switchPokemon.centralManager
     }
     
     var body: some View {
         VStack {
 //            Text(manager.discoveredPeripheral?.name ?? "")
 //            Text(String(manager.availableDevice.count))
-            Text(String(self.store.appState.switchPokemon.receiver.centralManager.availableDevice.count))
-            Text(String(self.store.appState.switchPokemon.receiver.centralManager.scannerCounter))
+//            Text(String(self.store.appState.switchPokemon.receiver.centralManager.availableDevice.count))
+//            Text(String(self.store.appState.switchPokemon.receiver.centralManager.scannerCounter))
 //            Text(String(self.store.appState.switchPokemon.receiver.switchablePoke.count))
-            Text(String(self.store.appState.switchPokemon.counter))
+//            Text(String(self.store.appState.switchPokemon.counter))
 
 //            Text(String(self.c))
-            List{
-                ForEach(self.store.appState.switchPokemon.receiver.centralManager.availableDevice){device in
-                    Text(device.name ?? " ")
-                }
-            }
-            
+//            List{
+//                ForEach(self.store.appState.switchPokemon.receiver.centralManager.availableDevice){device in
+//                    Text(device.name ?? " ")
+//                }
+//            }
+//            
             Button(action: {
                 manager.startScanning()
 //                self.store.appState.switchPokemon.receiver.switchablePoke.append(1)

@@ -62,20 +62,20 @@ struct PokemonInfoRow: View {
                         .modifier(ToolButtonModifier())
                 }
 
-                NavigationLink(
-                    destination:
-                        SafariView(
-                            url: model.detailPageURL,
-                            onFinished: { self.store.dispatch(.closeSafariView) }
-                        )
-                        .navigationBarTitle(Text(model.name), displayMode: .inline)
-                        .onAppear { self.store.dispatch(.togglePanelPresenting(presenting: false)) },
-                    isActive: expanded ? $store.appState.pokemonList.isSFViewActive : .constant(false),
-                    label: {
-                        Image(systemName: "info.circle")
-                            .modifier(ToolButtonModifier())
-                    }
-                )
+//                NavigationLink(
+//                    destination:
+//                        SafariView(
+//                            url: model.detailPageURL,
+//                            onFinished: { self.store.dispatch(.closeSafariView) }
+//                        )
+//                        .navigationBarTitle(Text(model.name), displayMode: .inline)
+//                        .onAppear { self.store.dispatch(.togglePanelPresenting(presenting: false)) },
+//                    isActive: expanded ? $store.appState.pokemonList.isSFViewActive : .constant(false),
+//                    label: {
+//                        Image(systemName: "info.circle")
+//                            .modifier(ToolButtonModifier())
+//                    }
+//                )
             }
             .padding(.bottom, 12)
             .opacity(self.expanded ? 1.0 : 0.0)

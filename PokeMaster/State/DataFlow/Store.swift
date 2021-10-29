@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Foundation
 
 //TODO: Update switchable pokemon list after get new one
 
@@ -151,10 +152,22 @@ class Store: ObservableObject {
             appState.pokemonList.abilities = nil
             appCommand = ClearCacheCommand()
             
-        case .addPokemon(pokemonID: let pokemonID):
-            appState.settings.loginUser?.pokemonsIDs.insert(pokemonID)
+        case .addWildPokemon:
+            appState.mapState.addNewWildPokemon()
+            
+        case .catchWildPokemon(pokemonID: let id):
+            appState.settings.loginUser?.pokemonsIDs.insert(id)
+            appState.mapState.catchWildPokemon(id: id)
             appCommand = AddPokemonCommand()
+
+        case .releasePokemon(pokemonIDs: let IDs):
+            appState.pokemonList.selectionState.panelIndex = nil
+            appState.settings.loginUser!.pokemonsIDs = appState.settings.loginUser!.pokemonsIDs.filter{id in
+                !IDs.contains(id)
+            }
+            appCommand = ReleasePokemonCommand()
         }
+        
         return (appState, appCommand)
     }
 }

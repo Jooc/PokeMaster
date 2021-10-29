@@ -48,6 +48,7 @@
 		D1EA9E0722FE5D1900CD45DE /* PokemonInfoPanelHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA9E0622FE5D1900CD45DE /* PokemonInfoPanelHeader.swift */; };
 		D1EA9E0A22FE689B00CD45DE /* PokemonInfoPanelAbilityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA9E0922FE689B00CD45DE /* PokemonInfoPanelAbilityList.swift */; };
 		D1EA9E0C22FF138E00CD45DE /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EA9E0B22FF138E00CD45DE /* MainTab.swift */; };
+		F17AE18B272AF499005AE10F /* Pokeball.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17AE18A272AF499005AE10F /* Pokeball.swift */; };
 		F1F216D02725AB3300DB8E1C /* pokemon-7.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216902725AB3300DB8E1C /* pokemon-7.json */; };
 		F1F216D12725AB3300DB8E1C /* pokemon-14.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216912725AB3300DB8E1C /* pokemon-14.json */; };
 		F1F216D22725AB3300DB8E1C /* pokemon-22.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216922725AB3300DB8E1C /* pokemon-22.json */; };
@@ -111,7 +112,7 @@
 		F1F2170C2725AB3300DB8E1C /* ability-34.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216CE2725AB3300DB8E1C /* ability-34.json */; };
 		F1F2170D2725AB3300DB8E1C /* ability-65.json in Resources */ = {isa = PBXBuildFile; fileRef = F1F216CF2725AB3300DB8E1C /* ability-65.json */; };
 		F1F217102725BCFD00DB8E1C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2170F2725BCFD00DB8E1C /* MapView.swift */; };
-		F1F21713272664C600DB8E1C /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21712272664C600DB8E1C /* SwitchView.swift */; };
+		F1F21713272664C600DB8E1C /* ReleaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21712272664C600DB8E1C /* ReleaseView.swift */; };
 		F1F21716272685F500DB8E1C /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21715272685F500DB8E1C /* BluetoothHelper.swift */; };
 		F1F2171E2726D17D00DB8E1C /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */; };
 		F1F217202726FC6500DB8E1C /* BLEPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */; };
@@ -163,6 +164,7 @@
 		D1EA9E0622FE5D1900CD45DE /* PokemonInfoPanelHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPanelHeader.swift; sourceTree = "<group>"; };
 		D1EA9E0922FE689B00CD45DE /* PokemonInfoPanelAbilityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoPanelAbilityList.swift; sourceTree = "<group>"; };
 		D1EA9E0B22FF138E00CD45DE /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		F17AE18A272AF499005AE10F /* Pokeball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokeball.swift; sourceTree = "<group>"; };
 		F1F216902725AB3300DB8E1C /* pokemon-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-7.json"; sourceTree = "<group>"; };
 		F1F216912725AB3300DB8E1C /* pokemon-14.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-14.json"; sourceTree = "<group>"; };
 		F1F216922725AB3300DB8E1C /* pokemon-22.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pokemon-22.json"; sourceTree = "<group>"; };
@@ -226,7 +228,7 @@
 		F1F216CE2725AB3300DB8E1C /* ability-34.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-34.json"; sourceTree = "<group>"; };
 		F1F216CF2725AB3300DB8E1C /* ability-65.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ability-65.json"; sourceTree = "<group>"; };
 		F1F2170F2725BCFD00DB8E1C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		F1F21712272664C600DB8E1C /* SwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		F1F21712272664C600DB8E1C /* ReleaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseView.swift; sourceTree = "<group>"; };
 		F1F21715272685F500DB8E1C /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
 		F1F2171D2726D17D00DB8E1C /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
 		F1F2171F2726FC6500DB8E1C /* BLEPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralManager.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				F1F2170F2725BCFD00DB8E1C /* MapView.swift */,
+				F17AE18A272AF499005AE10F /* Pokeball.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -558,7 +561,7 @@
 		F1F21714272664CF00DB8E1C /* Switch */ = {
 			isa = PBXGroup;
 			children = (
-				F1F21712272664C600DB8E1C /* SwitchView.swift */,
+				F1F21712272664C600DB8E1C /* ReleaseView.swift */,
 				F1F217212727024200DB8E1C /* SenderView.swift */,
 				F1F217232727024A00DB8E1C /* ReceiverView.swift */,
 			);
@@ -705,13 +708,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4358C3230D331F00D1E728 /* LoginRequest.swift in Sources */,
+				F17AE18B272AF499005AE10F /* Pokeball.swift in Sources */,
 				D14CFCEA231218DF003B68FB /* SafariView.swift in Sources */,
 				D130B8A722F875AC006EDCDC /* Pokemon.swift in Sources */,
 				F1F217242727024A00DB8E1C /* ReceiverView.swift in Sources */,
 				4B1FEF55230CDAED00B7D017 /* AppAction.swift in Sources */,
 				F1F217222727024200DB8E1C /* SenderView.swift in Sources */,
 				D15B5A5C230EDEBA00AD6C65 /* FileStorage.swift in Sources */,
-				F1F21713272664C600DB8E1C /* SwitchView.swift in Sources */,
+				F1F21713272664C600DB8E1C /* ReleaseView.swift in Sources */,
 				D1447BF322FD42C500FCEA21 /* BlurView.swift in Sources */,
 				D130B8A422F874CE006EDCDC /* PokemonInfoRow.swift in Sources */,
 				4B801560230BC5F900BD44E6 /* Language.swift in Sources */,

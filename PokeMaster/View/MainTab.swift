@@ -27,7 +27,7 @@ struct MainTab: View {
         TabView(selection: $store.appState.mainTab.selection) {
             PokemonRootView().tabItem {
                 Image(systemName: "list.bullet.below.rectangle")
-                Text("列表")
+                Text("图鉴")
             }.tag(AppState.MainTab.Index.list)
             
             MapView().tabItem {
@@ -35,9 +35,9 @@ struct MainTab: View {
                 Text("地图")
             }.tag(AppState.MainTab.Index.map)
             
-            SwitchView().tabItem{
+            ReleaseView().tabItem{
                 Image(systemName: "shareplay")
-                Text("交换")
+                Text("放生")
             }.tag(AppState.MainTab.Index.switchPoke)
 
             SettingRootView().tabItem {
