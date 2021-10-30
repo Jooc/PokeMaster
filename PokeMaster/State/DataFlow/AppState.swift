@@ -276,7 +276,7 @@ extension AppState {
 
 class MapManager: NSObject, CLLocationManagerDelegate{
     var locationManager: CLLocationManager?
-    var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 24.611883, longitude: 118.315689), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 24.611883, longitude: 118.315689), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     func checkIfLocationServiceIsEnabled(){
         if CLLocationManager.locationServicesEnabled(){

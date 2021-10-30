@@ -33,7 +33,7 @@ struct MapView: View {
                 annotationItems: $store.appState.mapState.wildPokemon){ item in
                     MapAnnotation(coordinate: item.coordinate.wrappedValue){
                         Button(action: {
-                            if (item.coordinate.wrappedValue.distance(from: (manager.locationManager?.location)!)) < 1000{
+                            if (item.coordinate.wrappedValue.distance(from: (manager.locationManager?.location)!)) < 5000{
                                 self.showPop = true
                                 self.chosenPokeID = item.pokemonID.wrappedValue
                             }else{

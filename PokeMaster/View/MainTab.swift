@@ -36,7 +36,7 @@ struct MainTab: View {
             }.tag(AppState.MainTab.Index.map)
             
             ReleaseView().tabItem{
-                Image(systemName: "shareplay")
+                Image(systemName: "pawprint.circle.fill")
                 Text("放生")
             }.tag(AppState.MainTab.Index.switchPoke)
 
